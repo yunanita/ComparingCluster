@@ -30,7 +30,7 @@ def about_dataset():
         st.caption("Child Mortality Data")
         
         # Display NutriData logo jika ada
-        nutridata_path = os.path.join(BASE_DIR, "nutridata.png")
+        nutridata_path = os.path.join(BASE_DIR, "NutriData.png")
         if os.path.exists(nutridata_path):
             st.image(nutridata_path, width=150)
         

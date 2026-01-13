@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import os
 
+# HARUS di awal sebelum perintah streamlit lainnya
+st.set_page_config(layout="wide", page_title="Dashboard Clustering Kesehatan & Lingkungan")
+
 # CSS untuk UI aesthetic dengan tema autumn/nature
 # Palette: #606c38 (olive), #283618 (dark green), #fefae0 (cream), #dda15e (orange), #bc6c25 (terracotta)
 st.markdown("""
@@ -375,8 +378,6 @@ except Exception:
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PATH_HEALTH = os.path.join(BASE_DIR, "child_mortality.xlsx")
 PATH_ENV = os.path.join(BASE_DIR, "deforestasi.xlsx")
-
-st.set_page_config(layout="wide", page_title="Dashboard Clustering Kesehatan & Lingkungan")
 
 # --- Header Utama ---
 st.markdown("""
