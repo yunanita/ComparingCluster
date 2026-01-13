@@ -123,7 +123,16 @@ Pastikan file berikut ada di folder `ComparingCluster/`:
 
 - `child_mortality.xlsx` - Dataset kesehatan
 - `deforestasi.xlsx` - Dataset lingkungan
-- `nutridata.png` - Logo/reference image (opsional)
+
+**Optional - Generate Image Files:**
+
+Jika ingin menampilkan logo GFW (Global Forest Watch) di section dataset lingkungan, jalankan:
+
+```bash
+python generate_gfw_image.py
+```
+
+Ini akan menggenerate `GFW.png` dari base64 data.
 
 ### 5. Run Streamlit App
 

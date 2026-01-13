@@ -9,13 +9,11 @@ venv/
 .streamlit/secrets.toml
 .DS_Store
 
-# Foto pribadi dan media lokal
+# Foto pribadi saja yang di-exclude (jangan upload ke GitHub)
 aku.jpeg
-nutridata.png
-*.jpg
-*.jpeg
 
-# Model dan cache
+# Cache dan model files (generated, tidak perlu di-upload)
 *.pkl
 *.pickle
+.cache/
 .cache/

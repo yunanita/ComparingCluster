@@ -86,6 +86,11 @@ def about_dataset():
         st.markdown("### 🌲 Dataset Lingkungan")
         st.caption("Deforestation Data")
         
+        # Display GFW (Global Forest Watch) logo jika ada
+        gfw_path = os.path.join(BASE_DIR, "GFW.png")
+        if os.path.exists(gfw_path):
+            st.image(gfw_path, width=150)
+        
         with st.container(border=True):
             st.markdown("**📋 Informasi Dataset**")
             
