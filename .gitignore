@@ -8,3 +8,14 @@ venv/
 .venv
 .streamlit/secrets.toml
 .DS_Store
+
+# Foto pribadi dan media lokal
+aku.jpeg
+nutridata.png
+*.jpg
+*.jpeg
+
+# Model dan cache
+*.pkl
+*.pickle
+.cache/

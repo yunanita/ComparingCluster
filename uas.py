@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 
 # CSS untuk UI aesthetic dengan tema autumn/nature
 # Palette: #606c38 (olive), #283618 (dark green), #fefae0 (cream), #dda15e (orange), #bc6c25 (terracotta)
@@ -370,8 +371,10 @@ except Exception:
     HAS_GEOPY = False
 
 # Paths (update these if needed)
-PATH_HEALTH = r"D:\KULIAH NOVIA\SMT 5 NOVIA\Machine Learning\child_mortality.xlsx"
-PATH_ENV = r"D:\KULIAH NOVIA\SMT 5 NOVIA\Machine Learning\deforestasi.xlsx"
+# Gunakan relative path - folder yang sama dengan script ini
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PATH_HEALTH = os.path.join(BASE_DIR, "child_mortality.xlsx")
+PATH_ENV = os.path.join(BASE_DIR, "deforestasi.xlsx")
 
 st.set_page_config(layout="wide", page_title="Dashboard Clustering Kesehatan & Lingkungan")
 

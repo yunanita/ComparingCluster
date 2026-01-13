@@ -1,8 +1,11 @@
 import streamlit as st
 import pandas as pd
+import os
 
-PATH_HEALTH = r"D:\KULIAH NOVIA\SMT 5 NOVIA\Machine Learning\child_mortality.xlsx"
-PATH_ENV = r"D:\KULIAH NOVIA\SMT 5 NOVIA\Machine Learning\deforestasi.xlsx"
+# Gunakan relative path - folder yang sama dengan script ini
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PATH_HEALTH = os.path.join(BASE_DIR, "child_mortality.xlsx")
+PATH_ENV = os.path.join(BASE_DIR, "deforestasi.xlsx")
 
 @st.cache_data
 def load_preview_health():
@@ -25,6 +28,11 @@ def about_dataset():
     with col_health:
         st.markdown("### 🏥 Dataset Kesehatan")
         st.caption("Child Mortality Data")
+        
+        # Display NutriData logo jika ada
+        nutridata_path = os.path.join(BASE_DIR, "nutridata.png")
+        if os.path.exists(nutridata_path):
+            st.image(nutridata_path, width=150)
         
         with st.container(border=True):
             st.markdown("**📋 Informasi Dataset**")

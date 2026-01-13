@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 def contact_tab():
     st.markdown('<div class="section-header">👤 Kontak & Informasi</div>', unsafe_allow_html=True)
@@ -8,8 +9,14 @@ def contact_tab():
     
     with col1:
         try:
-            st.image("C:/Users/LENOVO/OneDrive/Pictures/Saved Pictures/aku.jpeg", use_container_width=True)
-        except:
+            # Gunakan relative path - folder yang sama dengan script ini
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            img_path = os.path.join(base_dir, "aku.jpeg")
+            if os.path.exists(img_path):
+                st.image(img_path, use_container_width=True)
+            else:
+                st.info("📷 Foto tidak tersedia di deployment")
+        except Exception as e:
             st.info("📷 Foto tidak tersedia")
     
     with col2:
