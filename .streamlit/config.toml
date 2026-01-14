@@ -1,0 +1,17 @@
+[theme]
+# Tidak memaksakan warna agar adaptif ke tema user (light/dark)
+# primaryColor tetap untuk aksen
+primaryColor = "#bc6c25"
+font = "sans serif"
+
+# TIDAK SETTING backgroundColor dan textColor
+# Agar mengikuti tema default user (light/dark mode)
+
+[client]
+showErrorDetails = true
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
