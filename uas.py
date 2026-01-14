@@ -112,7 +112,7 @@ st.markdown("""
     }
     
     .main-header p {
-        color: #dda15e !important;
+        color: #fefae0 !important;
         font-size: 0.95rem !important;
         margin: 0.2rem 0 !important;
     }
@@ -732,7 +732,7 @@ st.markdown("""
 <div class="main-header">
     <h1>🌿 Dashboard Clustering Kesehatan & Lingkungan</h1>
     <p>🎓 UAS Machine Learning — Universitas Muhammadiyah Semarang</p>
-    <p>📅 Semarang, 17 Desember 2025</p>
+    <p>📅 Semarang, 15 Januari 2026</p>
 </div>
 """, unsafe_allow_html=True)
 
